@@ -4,9 +4,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  margin: 12;
-  margin-right: 300px;
-  font-family: Courier New, monospace;
+  margin-top: 10px;
+  margin-right: 50px;
+  margin-left: 300px;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  
+}
+* {
+  box-sizing: border-box;
 }
 
 .sidenav {
@@ -14,9 +20,9 @@ body {
   width: 120px;
   position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
-  background color: white;
+  top: 20px;
+  left: 40px;
+  background-color: white;
   overflow-x: hidden;
   padding-top: 20px;
   border: 1px solid rgb(190, 190, 190);
@@ -29,6 +35,7 @@ body {
   text-decoration: none;
   font-size: 12px;
   color: #000000;
+  font-family: Courier New, monospace;
   display: block;
 }
 
@@ -46,16 +53,54 @@ html {
 img {
   left: 900px;
   bottom: 80px;
-  height: 300px;
-  width: 300px;
-  opacity: 50%;
-  display: none;
+  height: 200px;
+  width: 200px;
+  opacity: 100%;
+  border-radius: 8px;
+}
+.column {   
+  float: left;
+  width: 75%;
+}
 
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+   border-radius: 8px;
+   line-height: 1.6;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+  margin-right:230px;
+  border-radius: 8px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 18px; 
+  font-size: 12px; 
   padding: 5px 10px;
 }
 
@@ -63,10 +108,19 @@ img {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+.p1 {
+  font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+  letter-spacing: 2px;
+}
+h2 {
+  letter-spacing: 2px;
+}
 
 </style>
 </head>
-<body style="background-color:#fff;">
+<body style="background-color: #f1f1f1;">
 
 <div class="sidenav">
   <a href="#home">HOME</a>
@@ -75,120 +129,91 @@ img {
   <a href="#resume">RESUME</a>
   <a href="#contact">CONTACT</a>
 </div>
-
-
-<div class="main" id="home">
-    <h2>Welcome</h2>
-    <p>My name is M Trigoso and I'm a senior studying Computer Science at DePaul University.</p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
   
 </body>
-</div>
-<div class="main" id="about">
-    <h3>About</h3>
-    <p>My name is M Trigoso and I'm a senior studying Computer Science at DePaul University. 
-      I have a double minor in both audio recording and data science. 
-      I'm a member of the Computer Science Society as well as an organizer for DePaul's annual Demonhacks hackathon. 
+<div class="row" id="home">
+  <div class="column">
+    <div class="card">
+      <br> </br>
+      <br> </br>
+      <br> </br>
+      <br> </br>
+      <br> </br>
+      <h1 style="color:rgb(20, 139, 99); text-align:center;">Welcome.</h1>
+      <h5></h5>
+      <p class= "p1" style="font-size:12px; text-align:center;">
+       I'm M Trigoso and this is my online portfolio, powered by github.</p>
+      <br> </br>
+      <br> </br>
+      <br> </br>
+      <br> </br>
+      <br> </br>
+      <h5></h5>
+      <p></p>
+    </div>
+    <div class="card" id="about">
+      <h2 class= "p1">ABOUT</h2>  
+      <div> <img src="images/portrait.jpeg" alt="" style="float:right"> </div>
+      <h4 style="color:rgb(20, 139, 99)">Bio</h4>
+      <p>
+        &emsp;  &emsp;My name is M Trigoso and I'm a senior pursuing my Bachelor's Degree in Computer Science at DePaul University, with a double minor in both audio recording and data science. 
+        Currently working as a Supplemental Instructor within my designated college, I spend much of my free time working on lesson planning and engaging with students in Systems I.
+        It's become one of my greatest priorities to help other students within my major in hopes that I can motivate them as my peers have helped me with challenging material in the past.
+      </p>  
+      <p>Beyond academics, my interests include composing sound art with a focus in recording techniques, as well as bike riding when the weather in Chicago permits.</p>
+      <h4 style="color:rgb(20, 139, 99)">Extracurriculars</h4>
+      <p>I serve as an organizer and graphics designer for DePaul's annual hackathon called DemonHacks. I'm also a member of DePaul's Computer Science Society.</p>
+    </div>
+    <div class="card" id="work">
+      <h2 class= "p1">WORK</h2>
+      <h5></h5>
+      <h3></h3>
+      <p>A few of my projects you'll see here are derived from my work in CS related courses.</p>
+      <p>Specifically, you'll see work included from my time in Intro to Compiler Design, and Software Testing and Quality Assurance. You can access the github repositories for each down below.</p>
+      <p class= "p1" style="text-align: center; font-size: 14px;"><a href="https://github.com/mtrigoso/IntroCompiler">An Intro Compiler</a></p>
+      <p>This project was challenging for both its concepts and use of language. 
+        Working with the very basic building blocks of a compiler, we worked to understandg how tokens, grammars, regular expressions, and class building all came together to compile code.</p>
+      <p class= "p1" style="text-align: center; font-size: 14px;"><a href="https://github.com/mtrigoso/ShoppingCart">A Shopping Cart</a>
+      <p>The purpose of this smaller project was to build familiarity working with the JUnit Framework. </p> 
 
-    </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
+      </p></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card" id="resume">
+      <h2 class= "p1">RESUME</h2>
+      <br><embed src="documents/MTrigoso_Resume2021.pdf" width="640" height="500" type="application/pdf"></br>
+      </p>
+    </div>
+    <div class="card" id="contact">
+      <h2 class= "p1">CONTACT</h2>
+      <form action="index.html">
+        <br><label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" style="width: 300px;"> 
+        </br>
+        <br>
+          <label for="fname"> &emsp; &emsp; &emsp; &emsp;Name:</label>
+          <input type="text" id="fname" name="fname">
+        </br>
+        <br>
+          <label for="message">&emsp; &emsp; &emsp; Message:</label></br>
+        <br> &emsp; &emsp;&emsp; &emsp; &emsp;&emsp;&emsp; 
+        <textarea name="text" rows="14" cols="40" wrap="soft" maxlength="500" style="overflow:hidden; resize:none;"> </textarea>
+        </br>
+        <p style="color:rgb(144, 144, 144); font-size: 10px;">&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;(max 500 characters.)</p>
+        <br><input style="margin-left:97px" type="submit" value="Submit" class="button"><submit onclick: ></br>
+      </form>
   
+    </div>
+  </div>
 </div>
 
-<div class="main" id="work">
-    <h3>Work</h3>
-    <p>A few of my projects you'll see here are derived from my work in CS related courses.</p>
-    <p>Specifically, you'll see work included from my time in Intro to Compiler Design, and Software Testing and Quality Assurance.</p>
-  
-    <p>You can access the github repositories for each down below.</p>
-  
-    <p><a href="https://github.com/mtrigoso/IntroCompiler">An Intro Compiler</a></p>
-    <p>.  </p>
-
-
-    <p><a href="https://github.com/mtrigoso/ShoppingCart">A Shopping Cart</a></p>
-
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-    <p>. </p>
-
+<div class="footer">
+  <p style="color:rgb(144, 144, 144)">Useful Links</p>
+  <p style="font-size: 10px;"><a href="https://github.com/mtrigoso" class="icon brands fa-github"><span
+    class="label">GitHub</span></a>
+  <p style="font-size: 10px;"> <a href="https://www.linkedin.com/in/mtrigoso/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a> </p>
 </div>
-
-<div class="main" id="resume">
-  <h3>Resume</h3>
-  <p>You can access a copy of my resume by clicking
-
-  <a href="documents/MTrigoso_Resume2021.pdf" target="_blank" class=" button
-								primary fit">here.</a>
-  </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-
-</div>
-  
-<div class="main" id="contact">
-  <h3>Contact</h3>
-  <p>. </p>
-    <p> <h4>Links</h4> </p>
-    <a href="https://github.com/mtrigoso" class="icon brands fa-github"><span
-										class="label">GitHub</span></a>
-  <p> <a href="https://www.linkedin.com/in/mtrigoso/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a> </p>
-
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-  <p>. </p>
-
 </div>
 
 </body>
